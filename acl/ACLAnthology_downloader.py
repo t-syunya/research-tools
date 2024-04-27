@@ -103,7 +103,7 @@ class ACLAnthologyDownloader:
         print("download finished.")
         self.driver.quit()
 
-    def generate_url(self, event_name, year):git 
+    def generate_url(self, event_name, year):
         url = f"https://aclweb.org/anthology/events/{event_name.lower()}-{year}/"
         return url
 
