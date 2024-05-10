@@ -5,7 +5,7 @@ This script downloads papers from the ACL Anthology.
 
 Usage
 -----
-python ACLAnthology_downloader.py -e <event_name> -y <year> -o <output_dir> [-v] [-b <bottom_link>] [-h]
+python ACLAnthology_downloader.py -e <event_name> -y <year> -o <output_dir> [-v] [-b <bottom_link>] [-H]
 Options:
     -e, --event: str
         Event name (e.g., NAACL, ACL, EMNLP)
@@ -17,7 +17,7 @@ Options:
         Show download progress
     -b, --bottomlink: str
         Wait for the link to appear at the bottom of the page
-    -h, --headless: bool
+    -H, --headless: bool
         Use headless mode browser
 """
 
@@ -121,7 +121,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--bottomlink", "-b", type=str, default=None, help="wait for the link to appear at the bottom of the page"
     )
-    parser.add_argument("--headless", "-h", action="store_true", default=False, help="use headless mode browser")
+    parser.add_argument("--headless", "-H", action="store_true", default=False, help="use headless mode browser")
     args = parser.parse_args()
 
     downloader = ACLAnthologyDownloader(args.headless)
